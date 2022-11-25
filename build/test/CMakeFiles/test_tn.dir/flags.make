@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/zhang-zh/workspace/CAD/SSI_tracing/include 
+CXX_INCLUDES = -I/home/zhang-zh/workspace/CAD/SSI_tracing/include -I/usr/include/eigen3 -I/usr/loacl/include 
 

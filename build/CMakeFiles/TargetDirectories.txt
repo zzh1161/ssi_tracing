@@ -4,3 +4,6 @@
 /home/zhang-zh/workspace/CAD/SSI_tracing/build/test/CMakeFiles/edit_cache.dir
 /home/zhang-zh/workspace/CAD/SSI_tracing/build/test/CMakeFiles/test_tn.dir
 /home/zhang-zh/workspace/CAD/SSI_tracing/build/test/CMakeFiles/test_glm.dir
+/home/zhang-zh/workspace/CAD/SSI_tracing/build/src/CMakeFiles/rebuild_cache.dir
+/home/zhang-zh/workspace/CAD/SSI_tracing/build/src/CMakeFiles/edit_cache.dir
+/home/zhang-zh/workspace/CAD/SSI_tracing/build/src/CMakeFiles/tran_intersec.dir

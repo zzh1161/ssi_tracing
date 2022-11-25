@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhang-zh/workspace/CAD/SSI_tracing/build/CMakeFiles /home/zhang-zh/workspace/CAD/SSI_tracing/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/zhang-zh/workspace/CAD/SSI_tracing/build/CMakeFiles /home/zhang-zh/workspace/CAD/SSI_tracing/build/src/CMakeFiles/progress.marks
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhang-zh/workspace/CAD/SSI_tracing/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,57 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named test_tn
+# Convenience name for target.
+src/CMakeFiles/tran_intersec.dir/rule:
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/tran_intersec.dir/rule
+.PHONY : src/CMakeFiles/tran_intersec.dir/rule
 
-# Build rule for target.
-test_tn: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_tn
-.PHONY : test_tn
+# Convenience name for target.
+tran_intersec: src/CMakeFiles/tran_intersec.dir/rule
 
-# fast build rule for target.
-test_tn/fast:
-	$(MAKE) -f test/CMakeFiles/test_tn.dir/build.make test/CMakeFiles/test_tn.dir/build
-.PHONY : test_tn/fast
-
-#=============================================================================
-# Target rules for targets named test_glm
-
-# Build rule for target.
-test_glm: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_glm
-.PHONY : test_glm
-
-# fast build rule for target.
-test_glm/fast:
-	$(MAKE) -f test/CMakeFiles/test_glm.dir/build.make test/CMakeFiles/test_glm.dir/build
-.PHONY : test_glm/fast
-
-#=============================================================================
-# Target rules for targets named tran_intersec
-
-# Build rule for target.
-tran_intersec: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tran_intersec
 .PHONY : tran_intersec
 
 # fast build rule for target.
 tran_intersec/fast:
-	$(MAKE) -f src/CMakeFiles/tran_intersec.dir/build.make src/CMakeFiles/tran_intersec.dir/build
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(MAKE) -f src/CMakeFiles/tran_intersec.dir/build.make src/CMakeFiles/tran_intersec.dir/build
 .PHONY : tran_intersec/fast
+
+tran_intersec.o: tran_intersec.cpp.o
+
+.PHONY : tran_intersec.o
+
+# target to build an object file
+tran_intersec.cpp.o:
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(MAKE) -f src/CMakeFiles/tran_intersec.dir/build.make src/CMakeFiles/tran_intersec.dir/tran_intersec.cpp.o
+.PHONY : tran_intersec.cpp.o
+
+tran_intersec.i: tran_intersec.cpp.i
+
+.PHONY : tran_intersec.i
+
+# target to preprocess a source file
+tran_intersec.cpp.i:
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(MAKE) -f src/CMakeFiles/tran_intersec.dir/build.make src/CMakeFiles/tran_intersec.dir/tran_intersec.cpp.i
+.PHONY : tran_intersec.cpp.i
+
+tran_intersec.s: tran_intersec.cpp.s
+
+.PHONY : tran_intersec.s
+
+# target to generate assembly for a file
+tran_intersec.cpp.s:
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(MAKE) -f src/CMakeFiles/tran_intersec.dir/build.make src/CMakeFiles/tran_intersec.dir/tran_intersec.cpp.s
+.PHONY : tran_intersec.cpp.s
 
 # Help Target
 help:
@@ -157,9 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test_tn"
-	@echo "... test_glm"
 	@echo "... tran_intersec"
+	@echo "... tran_intersec.o"
+	@echo "... tran_intersec.i"
+	@echo "... tran_intersec.s"
 .PHONY : help
 
 
@@ -171,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/zhang-zh/workspace/CAD/SSI_tracing/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

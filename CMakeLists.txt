@@ -8,3 +8,4 @@ include_directories(/usr/include/eigen3)
 include_directories(/usr/loacl/include)
 
 add_subdirectory(test)
+add_subdirectory(src)
