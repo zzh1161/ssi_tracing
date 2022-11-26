@@ -1,11 +1,16 @@
 cmake_minimum_required(VERSION 3.10)
 project(SSI_test)
 
-set(CMAKE_CXX_STANDARD 17)
+list(PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
+# Libigl
+include(libigl)
+
+# Enable the target igl::glfw
+igl_include(glfw)
 
 include_directories(include)
 include_directories(/usr/include/eigen3)
-include_directories(/usr/loacl/include)
 
 add_subdirectory(test)
 add_subdirectory(src)
