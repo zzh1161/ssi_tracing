@@ -63,31 +63,31 @@ int main(int argc, char *argv[])
         q.weights = {4, 4, {1,1,1,1, 5,5,5,5, 5,5,5,5, 1,1,1,1}};
         U0 = {0, 0, 0, static_cast<float>(1.0/3.0)};
     }else if(std::string(argv[1]) == "nurbs3"){
-        p.control_points = { 4, 4,
+        p.control_points = {4, 4,
                             {glm::vec3(-1.5,-1.5, 1.0), glm::vec3(-1.5,-0.5,1.0), glm::vec3(-1.5,0.5,1.0), glm::vec3(-1.5,1.5,1.0),
                              glm::vec3(-0.5,-1.5,1.0),  glm::vec3(-0.5,-0.5,1.0), glm::vec3(-0.5,0.5,1.0), glm::vec3(-0.5,1.5,1.0),
                              glm::vec3(0.5,-1.5,1.0),   glm::vec3(0.5,-0.5,1.0),  glm::vec3(0.5,0.5,1.0),  glm::vec3(0.5,1.5,1.0),
-                             glm::vec3(1.5,-1.5,1.0),   glm::vec3(1.5,-0.5,1.0),  glm::vec3(1.5,0.5,1.0),  glm::vec3(1.5,1.5,1.0)} };
+                             glm::vec3(1.5,-1.5,1.0),   glm::vec3(1.5,-0.5,1.0),  glm::vec3(1.5,0.5,1.0),  glm::vec3(1.5,1.5,1.0)}};
         p.weights = {4, 4, {1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1}};
-        q.control_points = { 4, 4,
+        q.control_points = {4, 4,
                             {glm::vec3(-0.5,-0.5,0.0), glm::vec3(-0.5,-0.5,1.0), glm::vec3(-0.5,-0.5,2.0), glm::vec3(-0.5,-0.5,3.0),
                              glm::vec3(-0.5,1.5,0.0),  glm::vec3(-0.5,1.5,1.0),  glm::vec3(-0.5,1.5,2.0),  glm::vec3(-0.5,1.5,3.0),
                              glm::vec3(1.5,-0.5,0.0),  glm::vec3(1.5,-0.5,1.0),  glm::vec3(1.5,-0.5,2.0),  glm::vec3(1.5,-0.5,3.0),
-                             glm::vec3(-0.5,-0.5,0.0), glm::vec3(-0.5,-0.5,1.0), glm::vec3(-0.5,-0.5,2.0), glm::vec3(-0.5,-0.5,3.0)} };
+                             glm::vec3(-0.5,-0.5,0.0), glm::vec3(-0.5,-0.5,1.0), glm::vec3(-0.5,-0.5,2.0), glm::vec3(-0.5,-0.5,3.0)}};
         q.weights = {4, 4, {1,1,1,1, 1,3,3,15, 1,3,3,15, 1,1,1,1}};
         U0 = {static_cast<float>(1.0/3.0), static_cast<float>(1.0/3.0), 0, static_cast<float>(1.0/3.0)};
     }else if(std::string(argv[1]) == "nurbs4"){
-        p.control_points = { 4, 4,
+        p.control_points = {4, 4,
                             {glm::vec3(-1.5,-1.5, 1.0), glm::vec3(-1.5,-0.5,1.0), glm::vec3(-1.5,0.5,1.0), glm::vec3(-1.5,1.5,1.0),
                              glm::vec3(-0.5,-1.5,1.0),  glm::vec3(-0.5,-0.5,2.0), glm::vec3(-0.5,0.5,2.0), glm::vec3(-0.5,1.5,1.0),
                              glm::vec3(0.5,-1.5,1.0),   glm::vec3(0.5,-0.5,2.0),  glm::vec3(0.5,0.5,2.0),  glm::vec3(0.5,1.5,1.0),
-                             glm::vec3(1.5,-1.5,1.0),   glm::vec3(1.5,-0.5,1.0),  glm::vec3(1.5,0.5,1.0),  glm::vec3(1.5,1.5,1.0)} };
+                             glm::vec3(1.5,-1.5,1.0),   glm::vec3(1.5,-0.5,1.0),  glm::vec3(1.5,0.5,1.0),  glm::vec3(1.5,1.5,1.0)}};
         p.weights = {4, 4, {1,1,1,1, 1,1,20,1, 1,20,1,1, 1,1,1,1}};
-        q.control_points = { 4, 4,
+        q.control_points = {4, 4,
                             {glm::vec3(-0.5,-2.5,0.0), glm::vec3(-0.5,-2.5,1.0), glm::vec3(-0.5,-2.5,2.0), glm::vec3(-0.5,-2.5,3.0),
                              glm::vec3(0.5,-1.5,0.0),  glm::vec3(0.5,-1.5,1.0),  glm::vec3(0.5,-1.5,2.0),  glm::vec3(0.5,-1.5,3.0),
                              glm::vec3(1.5,-0.5,0.0),  glm::vec3(1.5,-0.5,1.0),  glm::vec3(1.5,-0.5,2.0),  glm::vec3(1.5,-0.5,3.0),
-                             glm::vec3(2.5,0.5,0.0),   glm::vec3(2.5,0.5,1.0),   glm::vec3(2.5,0.5,2.0),   glm::vec3(2.5,0.5,3.0)} };
+                             glm::vec3(2.5,0.5,0.0),   glm::vec3(2.5,0.5,1.0),   glm::vec3(2.5,0.5,2.0),   glm::vec3(2.5,0.5,3.0)}};
         q.weights = {4, 4, {1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1}};
         U0 = {static_cast<float>(2.0/3.0), 0, static_cast<float>(1.0/3.0), static_cast<float>(1.0/3.0)};
     }else{
@@ -135,7 +135,7 @@ int main(int argc, char *argv[])
         }
         return false;
     };
-     viewer.callback_pre_draw =
+    viewer.callback_pre_draw =
         [&](igl::opengl::glfw::Viewer &)
     {
         if (last_selected != viewer.selected_data_index){
