@@ -6,7 +6,7 @@
 
 ## Build
 
-+ type these commands to build all examples:
++ type these commands to build all samples:
     ```
     mkdir build && cd build
     cmake ..
