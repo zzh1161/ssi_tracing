@@ -1,4 +1,4 @@
-# Curve tracing for SSI
+<h1 align="center">Curve tracing for SSI</h1>
 
 ## File Description
 
