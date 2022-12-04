@@ -2,13 +2,14 @@
 
 ## File Description
 
-+ `src` includes the first SSI tracing test.
++ `src` includes all SSI tracing test samples.
 
 ## Build
 
 + type these commands to build all examples:
     ```
-    mkdir build && cmake ..
+    mkdir build && cd build
+    cmake ..
     make
     ```
 
