@@ -90,6 +90,23 @@ int main(int argc, char *argv[])
                              glm::vec3(2.5,0.5,0.0),   glm::vec3(2.5,0.5,1.0),   glm::vec3(2.5,0.5,2.0),   glm::vec3(2.5,0.5,3.0)}};
         q.weights = {4, 4, {1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1}};
         U0 = {static_cast<float>(2.0/3.0), 0, static_cast<float>(1.0/3.0), static_cast<float>(1.0/3.0)};
+    }else if(std::string(argv[1]) == "nurbs5"){
+        p.control_points = { 4, 4,
+                        {glm::vec3(-1.5,-1.5, 1.0), glm::vec3(-1.5,-0.5,-0.001), glm::vec3(-1.5,0.5,-0.001), glm::vec3(-1.5,1.5,1.0),
+                         glm::vec3(-0.5,-1.5,1.0),  glm::vec3(-0.5,-0.5,0.0), glm::vec3(-0.5,0.5,0.0), glm::vec3(-0.5,1.5,1.0),
+                         glm::vec3(0.5,-1.5,1.0),   glm::vec3(0.5,-0.5,0.0),  glm::vec3(0.5,0.5,0.0),  glm::vec3(0.5,1.5,1.0),
+                         glm::vec3(1.5,-1.5,1.0),   glm::vec3(1.5,-0.5,-0.001),  glm::vec3(1.5,0.5,-0.001),  glm::vec3(1.5,1.5,1.0)} };
+        p.weights = {4, 4, {1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1}};
+        q.control_points = { 4, 4,
+                        {glm::vec3(-1.5,-1.5,1.0), glm::vec3(-1.5,-0.5,1.0),  glm::vec3(-1.5,0.5,1.0),  glm::vec3(-1.5,1.5,1.0),
+                         glm::vec3(-0.5,-1.5,0.0), glm::vec3(-0.5,-0.5,0.0), glm::vec3(-0.5,0.5,0.0), glm::vec3(-0.5,1.5,0.0),
+                         glm::vec3(0.5,-1.5,0.0),  glm::vec3(0.5,-0.5,0.0),  glm::vec3(0.5,0.5,0.0),  glm::vec3(0.5,1.5,0.0),
+                         glm::vec3(1.5,-1.5,1.0),  glm::vec3(1.5,-0.5,1.0),   glm::vec3(1.5,0.5,1.0),   glm::vec3(1.5,1.5,1.0)} };
+        q.weights = {4, 4, {1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1}};
+        U0 = {0, 0, 0, 0};
+        //U0 = {1, 1, 1, 1};
+        //This test sample has two starting points to test "Straying" in X-junctions case.
+        //Finally, two intersecting lines should be drawn according to the two starting points.
     }else{
         throw std::runtime_error("No such test sample!");
     }
