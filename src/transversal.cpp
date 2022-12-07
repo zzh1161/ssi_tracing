@@ -92,10 +92,10 @@ int main(int argc, char *argv[])
         U0 = {static_cast<float>(2.0/3.0), 0, static_cast<float>(1.0/3.0), static_cast<float>(1.0/3.0)};
     }else if(std::string(argv[1]) == "nurbs5"){
         p.control_points = { 4, 4,
-                        {glm::vec3(-1.5,-1.5, 1.0), glm::vec3(-1.5,-0.5,-0.001), glm::vec3(-1.5,0.5,-0.001), glm::vec3(-1.5,1.5,1.0),
+                        {glm::vec3(-1.5,-1.5, 1.0), glm::vec3(-1.5,-0.5,-0.0001), glm::vec3(-1.5,0.5,0.0), glm::vec3(-1.5,1.5,1.0),
                          glm::vec3(-0.5,-1.5,1.0),  glm::vec3(-0.5,-0.5,0.0), glm::vec3(-0.5,0.5,0.0), glm::vec3(-0.5,1.5,1.0),
                          glm::vec3(0.5,-1.5,1.0),   glm::vec3(0.5,-0.5,0.0),  glm::vec3(0.5,0.5,0.0),  glm::vec3(0.5,1.5,1.0),
-                         glm::vec3(1.5,-1.5,1.0),   glm::vec3(1.5,-0.5,-0.001),  glm::vec3(1.5,0.5,-0.001),  glm::vec3(1.5,1.5,1.0)} };
+                         glm::vec3(1.5,-1.5,1.0),   glm::vec3(1.5,-0.5,0.0),  glm::vec3(1.5,0.5,0.0),  glm::vec3(1.5,1.5,1.0)} };
         p.weights = {4, 4, {1,1,1,1, 1,1,1,1, 1,1,1,1, 1,1,1,1}};
         q.control_points = { 4, 4,
                         {glm::vec3(-1.5,-1.5,1.0), glm::vec3(-1.5,-0.5,1.0),  glm::vec3(-1.5,0.5,1.0),  glm::vec3(-1.5,1.5,1.0),
